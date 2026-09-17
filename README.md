@@ -62,7 +62,7 @@ Created a structured Organizational Unit (OU) design:
 
 
 
-!\[OU Structure](screenshots/01-ou-structure.png)
+![OU Structure](screenshots/01-ou-structure.png)
 
 
 
@@ -84,7 +84,7 @@ Created Global Security Groups for department-based access management:
 
 
 
-!\[Security Groups](screenshots/02-security-groups.png)
+![Security Groups](screenshots/02-security-groups.png)
 
 
 
@@ -176,11 +176,11 @@ Actions performed:
 
 
 
-!\[Disabled User](screenshots/03-disabled-user.png)
+![Disabled User](screenshots/03-disabled-user.png)
 
 
 
-!\[Leaver Verification](screenshots/04-leaver-verification.png)
+![Leaver Verification](screenshots/04-leaver-verification.png)
 
 
 
