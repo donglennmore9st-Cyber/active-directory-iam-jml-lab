@@ -1,0 +1,17 @@
+# DNS / DC verification
+ipconfig /all
+nslookup gcyber.test
+nslookup dc01.gcyber.test
+
+# Re-register DC DNS records
+ipconfig /registerdns
+nltest /dsregdns
+
+# Verify Joiner / Mover group membership
+Get-ADPrincipalGroupMembership sarah.lee | Select-Object Name
+
+# Verify Leaver account status and OU
+Get-ADUser sarah.lee -Properties Enabled | Select-Object Name,Enabled,DistinguishedName
+
+# Verify final group membership after offboarding
+Get-ADPrincipalGroupMembership sarah.lee | Select-Object Name
