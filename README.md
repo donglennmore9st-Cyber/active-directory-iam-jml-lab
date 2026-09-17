@@ -1,8 +1,8 @@
-\# Active Directory IAM Joiner-Mover-Leaver Lab
+# Active Directory IAM Joiner-Mover-Leaver Lab
 
 
 
-\## Project Overview
+## Project Overview
 
 
 
@@ -14,27 +14,27 @@ The project demonstrates a complete Joiner-Mover-Leaver (JML) workflow using Act
 
 
 
-\## Lab Environment
+## Lab Environment
 
 
 
-\- VMware Workstation Pro
+- VMware Workstation Pro
 
-\- Windows Server 2025
+- Windows Server 2025
 
-\- Active Directory Domain Services (AD DS)
+- Active Directory Domain Services (AD DS)
 
-\- DNS Server
+- DNS Server
 
-\- Domain: gcyber.test
+- Domain: gcyber.test
 
-\- Domain Controller: DC01
+- Domain Controller: DC01
 
-\- DC01 IP Address: 192.168.15.10
+- DC01 IP Address: 192.168.15.10
 
 
 
-\## Active Directory Structure
+## Active Directory Structure
 
 
 
@@ -42,7 +42,7 @@ Created a structured Organizational Unit (OU) design:
 
 
 
-\- Users
+- Users
 
 &#x20; - HR
 
@@ -52,13 +52,13 @@ Created a structured Organizational Unit (OU) design:
 
 &#x20; - IT
 
-\- Groups
+- Groups
 
-\- Computers
+- Computers
 
-\- Service Accounts
+- Service Accounts
 
-\- Disabled Users
+- Disabled Users
 
 
 
@@ -66,7 +66,7 @@ Created a structured Organizational Unit (OU) design:
 
 
 
-\## Security Groups
+## Security Groups
 
 
 
@@ -74,13 +74,13 @@ Created Global Security Groups for department-based access management:
 
 
 
-\- GG\_HR\_Users
+- GG\_HR\_Users
 
-\- GG\_Finance\_Users
+- GG\_Finance\_Users
 
-\- GG\_Sales\_Users
+- GG\_Sales\_Users
 
-\- GG\_IT\_Users
+- GG\_IT\_Users
 
 
 
@@ -88,7 +88,7 @@ Created Global Security Groups for department-based access management:
 
 
 
-\## Joiner Scenario
+## Joiner Scenario
 
 
 
@@ -96,7 +96,7 @@ Created a fictional employee:
 
 
 
-\*\*Sarah Lee\*\*
+**Sarah Lee**
 
 
 
@@ -104,7 +104,7 @@ Initial department:
 
 
 
-\*\*Sales\*\*
+**Sales**
 
 
 
@@ -112,19 +112,19 @@ Actions performed:
 
 
 
-1\. Created the user account `sarah.lee`
+1. Created the user account `sarah.lee`
 
-2\. Placed the account in the Sales OU
+2. Placed the account in the Sales OU
 
-3\. Assigned membership to `GG\_Sales\_Users`
+3. Assigned membership to `GG\_Sales\_Users`
 
-4\. Configured password change at next logon
+4. Configured password change at next logon
 
-5\. Verified group membership using PowerShell
+5. Verified group membership using PowerShell
 
 
 
-\## Mover Scenario
+## Mover Scenario
 
 
 
@@ -136,13 +136,13 @@ Actions performed:
 
 
 
-1\. Moved Sarah from the Sales OU to the Finance OU
+1. Moved Sarah from the Sales OU to the Finance OU
 
-2\. Removed `GG\_Sales\_Users`
+2. Removed `GG\_Sales\_Users`
 
-3\. Added `GG\_Finance\_Users`
+3. Added `GG\_Finance\_Users`
 
-4\. Verified the new group membership with PowerShell
+4. Verified the new group membership with PowerShell
 
 
 
@@ -150,7 +150,7 @@ This demonstrated the principle of least privilege by removing obsolete access b
 
 
 
-\## Leaver Scenario
+## Leaver Scenario
 
 
 
@@ -162,17 +162,17 @@ Actions performed:
 
 
 
-1\. Disabled the user account
+1. Disabled the user account
 
-2\. Removed Finance security-group access
+2. Removed Finance security-group access
 
-3\. Moved the account to the Disabled Users OU
+3. Moved the account to the Disabled Users OU
 
-4\. Retained the identity for audit and administrative purposes
+4. Retained the identity for audit and administrative purposes
 
-5\. Verified that the account was disabled
+5. Verified that the account was disabled
 
-6\. Verified that only the default Domain Users membership remained
+6. Verified that only the default Domain Users membership remained
 
 
 
@@ -184,7 +184,7 @@ Actions performed:
 
 
 
-\## PowerShell Verification
+## PowerShell Verification
 
 
 
