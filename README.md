@@ -202,3 +202,65 @@ Get-ADUser sarah.lee -Properties Enabled |
 
 Select-Object Name,Enabled,DistinguishedName
 
+```
+
+
+## AGDLP Role-Based File Access
+Implemented department-based access control using the **AGDLP** model:
+
+**Accounts → Global Groups → Domain Local Groups → Permissions**
+
+### Access Design
+
+- Finance: `GG_Finance_Users` → `DL_Finance_RW` → Finance Share
+- Sales: `GG_Sales_Users` → `DL_Sales_RW` → Sales Share
+- HR: `GG_HR_Users` → `DL_HR_RW` → HR Share
+- IT: `GG_IT_Users` → `DL_IT_RW` → IT Share
+
+Users were assigned to department-based Global Groups. These groups were nested into Domain Local groups, and permissions were assigned to the Domain Local groups instead of directly to individual users.
+
+This demonstrates scalable role-based access control and the principle of least privilege.
+
+### Access Validation
+
+- Finn Test → Finance access authorized
+- Sally Test → Sales access authorized
+- Hannah Test → HR role membership verified
+- Ian Test → IT access authorized
+- Cross-department access attempts were denied
+
+### Evidence
+
+#### Authorized Finance Access
+
+![Finance Authorized Access](01-finance-authorized-access.png)
+
+#### Finance Share Permission
+
+![Finance Share Gate](02-finance-share-gate.png)
+
+#### Effective Nested Membership
+
+![Finance Effective Membership](03-finance-effective-membership.png)
+
+#### Cross-Department Access Denied
+
+![Finance Access Denied](04-finance-access-denied.png)
+
+#### Authorized Sales Access
+
+![Sales Authorized Access](05-sales-authorized-access.png)
+
+### Verification Commands
+
+```
+
+Get-ADPrincipalGroupMembership username | Select-Object Name
+
+Get-ADGroupMember GroupName -Recursive |
+Select-Object Name,SamAccountName,ObjectClass
+
+Get-SmbShareAccess -Name ShareName
+
+Get-SmbShare
+```
