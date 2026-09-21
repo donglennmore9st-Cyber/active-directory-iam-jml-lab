@@ -233,23 +233,23 @@ This demonstrates scalable role-based access control and the principle of least 
 
 #### Authorized Finance Access
 
-![Finance Authorized Access](01-finance-authorized-access.png)
+![Finance Authorized Access](screenshots/01-finance-authorized-access.png)
 
 #### Finance Share Permission
 
-![Finance Share Gate](02-finance-share-gate.png)
+![Finance Share Gate](screenshots/02-finance-share-gate.png)
 
 #### Effective Nested Membership
 
-![Finance Effective Membership](03-finance-effective-membership.png)
+![Finance Effective Membership](screenshots/03-finance-effective-membership.png)
 
 #### Cross-Department Access Denied
 
-![Finance Access Denied](04-finance-access-denied.png)
+![Finance Access Denied](screenshots/04-finance-access-denied.png)
 
 #### Authorized Sales Access
 
-![Sales Authorized Access](05-sales-authorized-access.png)
+![Sales Authorized Access](screenshots/05-sales-authorized-access.png)
 
 ### Verification Commands
 
