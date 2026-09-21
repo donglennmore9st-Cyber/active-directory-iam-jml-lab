@@ -1,4 +1,4 @@
-# Active Directory IAM Joiner-Mover-Leaver Lab
+# Active Directory IAM Operations Lab Portfolio
 
 
 
