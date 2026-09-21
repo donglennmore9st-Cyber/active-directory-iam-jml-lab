@@ -6,11 +6,11 @@
 
 
 
-Built a Windows Server 2025 Active Directory lab using VMware Workstation to practice Identity and Access Management (IAM) lifecycle operations.
+Built a Windows Server 2025 Active Directory IAM lab using VMware Workstation to practice identity lifecycle management, role-based access control, access validation, troubleshooting, and ticket-driven IAM operations.
 
 
 
-The project demonstrates a complete Joiner-Mover-Leaver (JML) workflow using Active Directory Users and Computers and PowerShell verification.
+The portfolio demonstrates Joiner-Mover-Leaver (JML) workflows, AGDLP-based RBAC, least-privilege SMB/NTFS access control, PowerShell verification, functional access testing, and Jira Service Management request handling.
 
 
 
